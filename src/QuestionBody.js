@@ -276,15 +276,7 @@ const QuestionBody = () => {
       </QuestionBodyStyled>
       <QuestionBodyStyled>
         {dataSet.map((item, index) => {
-          // console.log(item.question2);
-          // 객체 컨트롤 (item =>...props)
-          return (
-            <QuestionContent
-              key={index}
-              content={item.question}
-              contentTwo={item.question2}
-            ></QuestionContent>
-          );
+          return <QuestionContent key={index} item={item}></QuestionContent>;
         })}
       </QuestionBodyStyled>
     </>

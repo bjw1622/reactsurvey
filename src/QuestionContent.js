@@ -10,8 +10,8 @@ const QuestionContent = (props) => {
       }}
     >
       <div style={{ marginLeft: "10px" }}>
-        <h2>{props.content}</h2>
-        <h4>{props.contentTwo}</h4>
+        <h2>{props.item.question}</h2>
+        <h4>{props.item.question2}</h4>
       </div>
       <div
         style={{
