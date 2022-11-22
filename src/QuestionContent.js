@@ -11,7 +11,7 @@ const QuestionContent = (props) => {
     >
       <div style={{ marginLeft: "10px" }}>
         <h2>{props.item.question}</h2>
-        <h4>{props.item.question2}</h4>
+        <h4 style={{ whiteSpace: "pre-wrap" }}>{props.item.question2}</h4>
       </div>
       <div
         style={{
@@ -20,9 +20,15 @@ const QuestionContent = (props) => {
           gridAutoFlow: "column",
         }}
       >
-        <input style={{ marginLeft: "0px" }} type="radio" />
-        <input style={{ marginLeft: "0px", marginRight: "4px" }} type="radio" />
+        <input className="good" style={{ marginLeft: "0px" }} type="radio" />
         <input
+          className="bad"
+          style={{ marginLeft: "0px", marginRight: "4px" }}
+          type="radio"
+          disabled
+        />
+        <input
+          className="no"
           style={{ marginLeft: "10px", marginRight: "12px" }}
           type="radio"
         />
