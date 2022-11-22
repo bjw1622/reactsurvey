@@ -20,9 +20,12 @@ const QuestionContent = (props) => {
           gridAutoFlow: "column",
         }}
       >
-        <input type="radio" />
-        <input type="radio" />
-        <input type="radio" />
+        <input style={{ marginLeft: "0px" }} type="radio" />
+        <input style={{ marginLeft: "0px", marginRight: "4px" }} type="radio" />
+        <input
+          style={{ marginLeft: "10px", marginRight: "12px" }}
+          type="radio"
+        />
       </div>
       <br />
     </div>
