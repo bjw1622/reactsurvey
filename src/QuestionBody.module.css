@@ -1,0 +1,13 @@
+.QuestionBody {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+  display: grid;
+  grid-template-columns: 600px 200px;
+}
+
+.QuestionBodyMain {
+  width: 100%;
+  height: 100%;
+  border: 1px solid gray;
+}

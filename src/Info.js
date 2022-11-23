@@ -1,27 +1,14 @@
 import React from "react";
-import styled from "styled-components";
+import styles from "./Info.module.css";
 
-const InfoStyled = styled.div`
-  width: 100%;
-  height: 50px;
-  border: 1px solid gray;
-  display: flex;
-  justify-content: space-around;
-`;
 const Info = () => {
   return (
     <>
-      <InfoStyled
-        style={{
-          display: "grid",
-          gridTemplateColumns: "600px 200px",
-          placeItems: "center",
-        }}
-      >
+      <div className={styles.Info}>
         <h1>부서</h1>
         <h1>이름</h1>
-      </InfoStyled>
-      <InfoStyled style={{ marginBottom: "30px" }}></InfoStyled>
+      </div>
+      <div className={styles.InfoBottom}></div>
     </>
   );
 };

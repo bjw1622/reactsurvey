@@ -21,7 +21,6 @@ const BackgroundDiv = styled.div`
 
 const App = () => {
   return (
-    // 응답자 갯수만큼 돌리기
     <div>
       {answerDataSet.map((item, index) => {
         return (

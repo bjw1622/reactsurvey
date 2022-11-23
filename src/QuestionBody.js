@@ -1,21 +1,12 @@
 import React from "react";
-import styled from "styled-components";
 import QuestionContent from "./QuestionContent";
 import dataSet from "../src/questionData.json";
-const QuestionBodyStyled = styled.div`
-  width: 100%;
-  height: 100%;
-  border: 1px solid gray;
-`;
+import styles from "./QuestionBody.module.css";
+
 const QuestionBody = (props) => {
   return (
     <>
-      <QuestionBodyStyled
-        style={{
-          display: "grid",
-          gridTemplateColumns: "600px 200px",
-        }}
-      >
+      <div className={styles.QuestionBody}>
         <h2 style={{ display: "grid", placeItems: "center" }}>점검 항목</h2>
         <div>
           <h2 style={{ display: "grid", placeItems: "center" }}>점검 결과</h2>
@@ -33,8 +24,8 @@ const QuestionBody = (props) => {
             </h3>
           </div>
         </div>
-      </QuestionBodyStyled>
-      <QuestionBodyStyled>
+      </div>
+      <div className={styles.QuestionBodyMain}>
         {dataSet.map((item, index) => {
           return (
             <QuestionContent
@@ -44,7 +35,7 @@ const QuestionBody = (props) => {
             ></QuestionContent>
           );
         })}
-      </QuestionBodyStyled>
+      </div>
     </>
   );
 };
