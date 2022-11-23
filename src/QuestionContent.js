@@ -3,7 +3,7 @@ import React from "react";
 const QuestionContent = (props) => {
   return (
     <div
-      key={props.key}
+      key={props.item.index}
       style={{
         display: "grid",
         gridTemplateColumns: "600px 200px",
@@ -20,19 +20,36 @@ const QuestionContent = (props) => {
           gridAutoFlow: "column",
         }}
       >
-        <input className="good" style={{ marginLeft: "0px" }} type="radio" />
-        <input
-          className="bad"
-          style={{ marginLeft: "0px", marginRight: "4px" }}
-          type="radio"
-        />
-        <input
-          className="no"
-          style={{ marginLeft: "10px", marginRight: "12px" }}
-          type="radio"
-        />
+        {props.answerList.map((item, index) => {
+          return (
+            <React.Fragment key={index}>
+              {item.index === props.item.index ? (
+                <>
+                  <input
+                    style={{ marginLeft: "0px" }}
+                    type="radio"
+                    checked={item.answer === 0}
+                  />
+                  <input
+                    style={{ marginLeft: "0px", marginRight: "4px" }}
+                    type="radio"
+                    checked={item.answer === 1}
+                  />
+                  <input
+                    style={{ marginLeft: "10px", marginRight: "12px" }}
+                    type="radio"
+                    checked={item.answer === 2}
+                  />
+                </>
+              ) : (
+                <></>
+              )}
+            </React.Fragment>
+          );
+        })}
+
+        <br />
       </div>
-      <br />
     </div>
   );
 };

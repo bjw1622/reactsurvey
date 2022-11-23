@@ -274,7 +274,13 @@ const QuestionBody = (props) => {
       </QuestionBodyStyled>
       <QuestionBodyStyled>
         {dataSet.map((item, index) => {
-          return <QuestionContent key={index} item={item}></QuestionContent>;
+          return (
+            <QuestionContent
+              key={index}
+              item={item}
+              answerList={props.answerList}
+            ></QuestionContent>
+          );
         })}
       </QuestionBodyStyled>
     </>
