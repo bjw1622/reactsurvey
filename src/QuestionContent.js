@@ -25,7 +25,6 @@ const QuestionContent = (props) => {
           className="bad"
           style={{ marginLeft: "0px", marginRight: "4px" }}
           type="radio"
-          disabled
         />
         <input
           className="no"

@@ -7,7 +7,7 @@ const QuestionBodyStyled = styled.div`
   height: 100%;
   border: 1px solid gray;
 `;
-const QuestionBody = () => {
+const QuestionBody = (props) => {
   const dataSet = [
     {
       index: 0,
@@ -59,7 +59,7 @@ const QuestionBody = () => {
       index: 7,
       question: "개인정보의 폐기 및 반납이 적절하게 시행되고 있는지?",
       question2: `*제공받은 개인정보에 대하여 별도의 요청이 없는 경우 3년 이내에 폐기해야 함    
-  *개인정보 폐기를 시행한 경우 그 결과를 서면으로 통보해야 함`,
+*개인정보 폐기를 시행한 경우 그 결과를 서면으로 통보해야 함`,
     },
     {
       index: 8,
@@ -248,7 +248,6 @@ const QuestionBody = () => {
       question2: `*수탁자의 개인정보처리 현황 및 실태, 목적외 이용․제공, 재위탁 여부, 안전성확보조치 여부 등에 대하여 점검하여야 함     *종이문서 파기작업 현장에 입회하여 확인하거나, 파기결과를 사후 점검하는 등 수탁자를 감독하여야 함`,
     },
   ];
-
   return (
     <>
       <QuestionBodyStyled
