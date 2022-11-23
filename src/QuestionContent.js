@@ -16,8 +16,8 @@ const QuestionContent = (props) => {
       <div
         style={{
           display: "grid",
-          placeItems: "center",
           gridAutoFlow: "column",
+          placeItems: "center",
         }}
       >
         {props.answerList.map((item, index) => {
@@ -25,21 +25,9 @@ const QuestionContent = (props) => {
             <React.Fragment key={index}>
               {item.index === props.item.index ? (
                 <>
-                  <input
-                    style={{ marginLeft: "0px" }}
-                    type="radio"
-                    checked={item.answer === 0}
-                  />
-                  <input
-                    style={{ marginLeft: "0px", marginRight: "4px" }}
-                    type="radio"
-                    checked={item.answer === 1}
-                  />
-                  <input
-                    style={{ marginLeft: "10px", marginRight: "12px" }}
-                    type="radio"
-                    checked={item.answer === 2}
-                  />
+                  <input type="radio" defaultChecked={item.answer === 0} />
+                  <input type="radio" defaultChecked={item.answer === 1} />
+                  <input type="radio" defaultChecked={item.answer === 2} />
                 </>
               ) : (
                 <></>

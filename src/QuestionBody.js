@@ -26,9 +26,11 @@ const QuestionBody = (props) => {
               placeItems: "center",
             }}
           >
-            <h3>양호</h3>
-            <h3>미흡</h3>
-            <h3>해당 없음</h3>
+            <h3 style={{ marginLeft: "7px" }}>양호</h3>
+            <h3 style={{ marginLeft: "8px" }}>미흡</h3>
+            <h3 style={{ marginRight: "0px", paddingRight: "20px" }}>
+              해당 없음
+            </h3>
           </div>
         </div>
       </QuestionBodyStyled>
