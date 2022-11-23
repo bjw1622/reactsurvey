@@ -140,10 +140,11 @@ const App = () => {
     // 응답자 갯수만큼 돌리기
     <div>
       {answerDataSet.map((item, index) => {
+        console.log(index);
         return (
           <BackgroundDiv>
             <Info></Info>
-            <QuestionBody ele={item}></QuestionBody>
+            <QuestionBody index={index}></QuestionBody>
           </BackgroundDiv>
         );
       })}
