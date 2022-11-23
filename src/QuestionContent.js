@@ -47,7 +47,6 @@ const QuestionContent = (props) => {
             </React.Fragment>
           );
         })}
-
         <br />
       </div>
     </div>
