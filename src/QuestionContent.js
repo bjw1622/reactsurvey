@@ -1,5 +1,5 @@
 import React from "react";
-
+import QuestionCotentStyle from "./QuestionContent.module.css";
 const QuestionContent = (props) => {
   return (
     <div
@@ -25,9 +25,21 @@ const QuestionContent = (props) => {
             <React.Fragment key={index}>
               {item.index === props.item.index ? (
                 <>
-                  <input type="radio" defaultChecked={item.answer === 0} />
-                  <input type="radio" defaultChecked={item.answer === 1} />
-                  <input type="radio" defaultChecked={item.answer === 2} />
+                  <input
+                    type="radio"
+                    checked={item.answer === 0 ? true : false}
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    checked={item.answer === 1 ? true : false}
+                    readOnly
+                  />
+                  <input
+                    type="radio"
+                    checked={item.answer === 2 ? true : false}
+                    readOnly
+                  />
                 </>
               ) : (
                 <></>
