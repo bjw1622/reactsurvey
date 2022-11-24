@@ -10,13 +10,7 @@ const QuestionBody = (props) => {
         <h2 style={{ display: "grid", placeItems: "center" }}>점검 항목</h2>
         <div>
           <h2 style={{ display: "grid", placeItems: "center" }}>점검 결과</h2>
-          <div
-            style={{
-              display: "grid",
-              gridAutoFlow: "column",
-              placeItems: "center",
-            }}
-          >
+          <div className={styles.QuestionBodyResultInfo}>
             <h3 style={{ marginLeft: "7px" }}>양호</h3>
             <h3 style={{ marginLeft: "8px" }}>미흡</h3>
             <h3 style={{ marginRight: "0px", paddingRight: "20px" }}>

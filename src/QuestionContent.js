@@ -2,24 +2,12 @@ import React from "react";
 import QuestionCotentStyle from "./QuestionContent.module.css";
 const QuestionContent = (props) => {
   return (
-    <div
-      key={props.item.index}
-      style={{
-        display: "grid",
-        gridTemplateColumns: "600px 200px",
-      }}
-    >
+    <div key={props.item.index} className={QuestionCotentStyle.QuestionDiv}>
       <div style={{ marginLeft: "10px" }}>
         <h2>{props.item.question}</h2>
         <h4 style={{ whiteSpace: "pre-wrap" }}>{props.item.question2}</h4>
       </div>
-      <div
-        style={{
-          display: "grid",
-          gridAutoFlow: "column",
-          placeItems: "center",
-        }}
-      >
+      <div className={QuestionCotentStyle.QuestionInput}>
         {props.answerList.map((item, index) => {
           return (
             <React.Fragment key={index}>

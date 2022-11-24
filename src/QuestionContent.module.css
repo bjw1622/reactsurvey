@@ -1,0 +1,9 @@
+.QuestionDiv {
+  display: grid;
+  grid-template-columns: 600px 200px;
+}
+.QuestionInput {
+  display: grid;
+  grid-auto-flow: column;
+  place-items: center;
+}
