@@ -20,6 +20,7 @@ const QuestionBody = (props) => {
         </div>
       </div>
       <div className={styles.QuestionBodyMain}>
+        {/* map 사용 하지 않고 수정 */}
         {dataSet.map((item, index) => {
           return (
             <QuestionContent
